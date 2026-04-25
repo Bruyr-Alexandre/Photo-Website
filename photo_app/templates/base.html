@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title> {% block title %} Photo {% endblock %}</title>
+        <style>
+            body {
+                background-color: beige;
+                padding: 2vh;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .container{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+                min-height: 80vh;
+            }
+            .navigation{
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 5px;
+                min-height: 10vh;
+                margin-bottom: 10px;
+            }
+            .left, .right{
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 20%;
+                min-height: 90%;
+                height: auto;
+            }
+            .center{
+                border: 1px solid black;
+                border-radius: 10px;
+                min-width: 60%;
+                min-height: 90%;
+                height: auto;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation"></div>
+        <div class="container">
+            <div class="left"></div>
+            <div class="center"> {% block content %}{% endblock %}</div>
+            <div class="right"></div>
+        </div>
+    </body>
+</html>
